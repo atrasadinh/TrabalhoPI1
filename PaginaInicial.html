@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Achados e Perdidos UNIRIO</title>
+
+<style>
+  .barraNavegacao {
+    background-color: #003366;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo-titulo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .logo-titulo h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .menu {
+    display: flex;
+    gap: 15px;
+    align-items: center; 
+  }
+
+  .menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .menu a:not(.btn-sair):hover { 
+    text-decoration: underline;
+  }
+
+  .btn-sair{
+    color: #003366;
+    padding: 8px 15px; 
+    border-radius: 5px;
+  }
+
+  .btn-sair:hover {
+    background-color: #e0e0e0; 
+    color: #003366; 
+  }
+
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    text-align: center;
+  }
+
+  h1 {
+    color: #003366;
+    margin-top: 50px;
+  }
+
+  p {
+    color: #333;
+    font-size: 16px;
+  }
+
+  .botoes {
+    margin-top: 30px;
+  }
+
+  .botoes input[type="submit"] {
+    width: 220px;
+    margin: 10px;
+    padding: 12px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .botoes input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .logo-titulo img {
+    width: 45px;
+    height: 45px;
+  }
+</style>
+</head>
+
+<body>
+
+  <div class="barraNavegacao">
+    <div class="logo-titulo">
+      <img src="logoUnirio.png" alt="Logo">
+      <h3>Achados e Perdidos UNIRIO</h3>
+    </div>
+
+     <div class="menu">
+      <a href="#" class="btn-inicio">Início</a>
+      <a href="#" class="btn-itemEncontrado">Item Encontrado</a>
+      <a href="#" class="btn-buscar">Buscar</a>
+      <a href="#" class="btn-admin">Admin</a>
+      <a href="#" class="btn-sair">Sair</a>
+    </div>
+  </div>
+
+  <h1>Bem-vindo(a)</h1>
+  <p>Encontre o que você perdeu ou ajude alguém a encontrar.</p>
+
+  <div class="botoes">
+    <input type="submit" value="Encontrei um Item">
+    <input type="submit" value="Buscar um Item">
+  </div>
+
+</body>
+</html>
