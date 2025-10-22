@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Achados e Perdidos UNIRIO</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    text-align: center;
+  }
+
+  .barraNavegacao {
+    background-color: #003366;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-titulo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .logo-titulo h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .logo-titulo img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .menu {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .menu a:not(.btn-sair):hover {
+    text-decoration: underline;
+  }
+
+  .btn-sair {
+    color: #003366;
+    background-color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+
+  .btn-sair:hover {
+    background-color: #e0e0e0;
+    color: #003366;
+  }
+
+  h2 {
+    color: #003366;
+    margin-top: 50px;
+  }
+
+  form {
+    background-color: white;
+    width: 60%;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+
+  fieldset {
+    border: none;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input[type="text"], input[type="date"], select, textarea {
+    width: 95%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .botoes {
+    text-align: right;
+    margin-top: 20px;
+  }
+
+  button, .btn-cadastrar-foto {
+    display: inline-block;
+    background-color: #003366;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+</head>
+
+<body>
+
+  <div class="barraNavegacao">
+    <div class="logo-titulo">
+      <img src="logoUnirio.png" alt="Logo UNIRIO">
+      <h3>Achados e Perdidos UNIRIO</h3>
+    </div>
+
+    <div class="menu">
+      <a href="#" class="btn-inicio">Início</a>
+      <a href="#" class="btn-itemEncontrado">Item Encontrado</a>
+      <a href="#" class="btn-buscar">Buscar</a>
+      <a href="#" class="btn-admin">Admin</a>
+      <a href="#" class="btn-sair">Sair</a>
+    </div>
+  </div>
+  
+  <h2>Registrar Objeto Encontrado</h2>
+
+  <form action="#" method="post" enctype="multipart/form-data">
+    <fieldset>
+      <label for="nome">Nome do Item:</label><br>
+      <input type="text" id="nome" name="nome" required><br>
+
+      <label for="local">Local em que foi encontrado:</label><br>
+      <input type="text" id="local" name="local" required><br>
+
+      <label for="categoria">Categoria:</label><br>
+      <select id="categoria" name="categoria" required>
+        <option value="Eletronicos">Eletrônicos</option>
+        <option value="Vestuario">Vestuário</option>
+        <option value="Documentos">Documentos</option>
+        <option value="Acessorios">Acessórios</option>
+        <option value="Outros">Outros</option>
+      </select><br>
+      
+      <label for="data">Data:</label><br>
+      <input type="date" id="data" name="data" required><br>
+
+      <label for="descricao">Descrição detalhada:</label><br>
+      <textarea id="descricao" name="descricao" rows="5"></textarea><br>
+      
+      <label for="contato">Sua forma de contato (E-mail, Telefone, etc.):</label><br>
+      <input type="text" id="contato" name="contato" required><br>
+
+      <p><strong>Foto do Item (opcional)</strong></p>
+      <label class="btn-cadastrar-foto">Escolher arquivo</label><br>
+
+      <div class="botoes">
+        <button type="submit">Cadastrar Item</button>
+      </div>
+    </fieldset>
+  </form>
+
+</body>
+</html>
