@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <title>Achados e Perdidos UNIRIO</title>
@@ -97,6 +98,64 @@
     width: 45px;
     height: 45px;
   }
+
+.secao-itens {
+      margin: 40px auto;
+      max-width: 900px;
+      text-align: left;
+    }
+
+    .secao-itens h3 {
+      color: #003366;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .lista-itens {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: flex-start;
+    }
+
+    .cartao-item {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      width: 250px;
+    }
+
+    .cartao-item h4 {
+      margin: 0 0 10px 0;
+      color: #003366;
+    }
+
+    .cartao-item p {
+      margin: 4px 0;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .btn-detalhes {
+      width: 220px;
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #003366;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+      text-align: center;
+    }
+
+    .btn-detalhes:hover {
+      background-color: #0056b3;
+    }
+
 </style>
 </head>
 
@@ -104,11 +163,11 @@
 
   <div class="barraNavegacao">
     <div class="logo-titulo">
-      <img src="logoUnirio.png" alt="Logo">
+      <img src="logoUnirio.png" alt="Logo UNIRIO">
       <h3>Achados e Perdidos UNIRIO</h3>
     </div>
 
-     <div class="menu">
+    <div class="menu">
       <a href="#" class="btn-inicio">Início</a>
       <a href="#" class="btn-itemEncontrado">Item Encontrado</a>
       <a href="#" class="btn-buscar">Buscar</a>
@@ -125,6 +184,31 @@
     <input type="submit" value="Buscar um Item">
   </div>
 
-</body>
+  <div class="secao-itens">
+    <h3>Últimos Itens Encontrados</h3>
+    <div class="lista-itens">
+      <div class="cartao-item">
+        <h4>Fone de Ouvido</h4>
+        <p>Local: Sala 215</p>
+        <p>Em: 07/10/2025</p>
+        <a href="#" class="btn-detalhes">Ver Detalhes</a>
+      </div>
 
+      <div class="cartao-item">
+        <h4>Garrafa Marrom</h4>
+        <p>Local: CA</p>
+        <p>Em: 09/10/2025</p>
+        <a href="#" class="btn-detalhes">Ver Detalhes</a>
+      </div>
+      
+      <div class="cartao-item">
+        <h4>Caderno do Batman</h4>
+        <p>Local: Lab 3</p>
+        <p>Em: 10/10/2025</p>
+        <a href="#" class="btn-detalhes">Ver Detalhes</a>
+    	</div>   
+    </div>
+  </div>
+
+</body>
 </html>
